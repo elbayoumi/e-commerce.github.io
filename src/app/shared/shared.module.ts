@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
-
+import { HeaderComponent } from './components/header/header.component';
+import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -9,7 +11,14 @@ import { HeaderComponent } from './header/header.component';
     HeaderComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    HttpClientModule ,
+    BrowserModule
+  ],
+  exports: [
+     HeaderComponent,
+
   ]
 })
 export class SharedModule { }
